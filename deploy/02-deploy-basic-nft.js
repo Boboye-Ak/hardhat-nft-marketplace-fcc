@@ -11,9 +11,10 @@ module.exports = async ({ deployments, getNamedAccounts }) => {
         log: true,
         waitConfirmations: network.config.blockConfirmations || 1,
     })
-    if(!developmentChains.includes(network.name))
-    {
+    if (!developmentChains.includes(network.name)) {
         log("-------verifying-------")
         verify(basicNft.address, args)
     }
 }
+
+module.exports.tags=["all", "BasicNft"]

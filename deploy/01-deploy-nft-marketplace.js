@@ -12,7 +12,7 @@ module.exports = async ({ deployments, getNamedAccounts }) => {
     })
 
     if (!developmentChains.includes(network.name)) {
-        log("----------verifying-----------------")
+        log("------------verifying-----------------")
         await verify(nftMarketplace.address, [])
     }
 }
